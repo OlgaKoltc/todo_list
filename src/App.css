@@ -1,6 +1,17 @@
 .App {
   text-align: center;
 }
+main {
+  margin: 0 auto;
+  background-color: rgb(126, 168, 154);
+  width: 90vw;
+  height: 100vh;
+}
+h1 {
+  text-align: center;
+  color: rgb(204, 236, 226);
+  padding: 20px 0px;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

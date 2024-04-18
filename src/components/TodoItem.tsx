@@ -1,13 +1,14 @@
+import React from "react";
 import { ITodo } from "../types/data";
 
 interface ITodoItem extends ITodo {
   removeTodo: (id: number) => void;
   toggleTodo: (id: number) => void;
-  doneTodo: (id: number) => void;
+  completedTodo: (id: number) => void;
 }
 
 const TodoItem: React.FC<ITodoItem> = (props) => {
-  const { id, title, complete, removeTodo, toggleTodo, doneTodo } = props;
+  const { id, title, complete, removeTodo, toggleTodo, completedTodo } = props;
 
   return (
     <div>
@@ -16,7 +17,7 @@ const TodoItem: React.FC<ITodoItem> = (props) => {
         checked={complete}
         onChange={() => {
           toggleTodo(id);
-          doneTodo(id);
+          completedTodo(id);
         }}
       />
       {title}
